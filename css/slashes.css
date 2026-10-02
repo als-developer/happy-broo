@@ -162,4 +162,11 @@
   position: absolute; inset: 0;
   background: radial-gradient(circle, rgba(255,255,255,0.95), transparent 60%);
   opacity: 0;
-  animation: flashEffectAnim 5s 4.5s ease
+  animation: flashEffectAnim 5s 4.5s ease forwards;
+  pointer-events: none;
+}
+@keyframes flashEffectAnim {
+  0% { opacity: 0; }
+  15% { opacity: 1; }
+  100% { opacity: 0; }
+}
