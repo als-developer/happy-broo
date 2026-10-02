@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🔐 Admin Panel — Dr. Shadrack | AiliFesolution (ALS)</title>
+<link rel="stylesheet" href="admin.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&family=Cinzel:wght@700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<div id="adminIntro">
+  <div class="slash slash-a"></div>
+  <div class="slash slash-b"></div>
+  <div class="slash slash-c"></div>
+  <div class="slash slash-d"></div>
+  <div class="slash slash-e"></div>
+  <div class="slash slash-f"></div>
+  <div class="admin-intro-text">
+    <h1>🔐 ADMIN ACCESS</h1>
+    <p>Dr. Shadrack Birthday Portal</p>
+    <p class="als-brand">Powered by AiliFesolution (ALS)</p>
+  </div>
+</div>
+
+<div id="loginScreen" class="login-wrapper">
+  <div class="login-box glass">
+    <div class="lock-icon">🔒</div>
+    <h1>Admin Login</h1>
+    <p class="login-sub">Ingiza neno la siri kuingia</p>
+
+    <div class="input-group">
+      <span class="input-icon">👤</span>
+      <input type="text" id="username" placeholder="Jina la Admin" autocomplete="off">
+    </div>
+    <div class="input-group">
+      <span class="input-icon">🔑</span>
+      <input type="password" id="password" placeholder="Neno la Siri">
+    </div>
+
+    <button id="loginBtn" class="btn-login">🚀 Ingia</button>
+    <p id="loginError" class="error-msg"></p>
+    <p class="hint">💡 Default: <b>admin</b> / <b>shadrack2026</b></p>
+    <a href="index.html" class="back-link">← Rudi kwenye Website</a>
+  </div>
+</div>
+
+<div id="dashboard" class="dashboard hidden">
+  <header class="dash-header glass">
+    <h1>🎛️ Admin Dashboard — Dr. Shadrack</h1>
+    <div class="dash-actions">
+      <a href="index.html" class="btn-dash">🏠 Tazama Site</a>
+      <button id="logoutBtn" class="btn-dash danger">🚪 Toka</button>
+    </div>
+  </header>
+
+  <div class="dash-grid">
+    <div class="dash-card glass">
+      <h2>📸 Ongeza Picha</h2>
+      <input type="text" id="photoUrl" placeholder="URL ya picha (https://...)">
+      <input type="text" id="photoCaption" placeholder="Maelezo (mfano: Sherehe 🎉)">
+      <button id="addPhotoBtn" class="btn-dash primary">➕ Ongeza Picha</button>
+      <div id="photoList" class="item-list"></div>
+    </div>
+
+    <div class="dash-card glass">
+      <h2>📖 Ongeza Historia</h2>
+      <input type="text" id="tlYear" placeholder="Mwaka (mfano: 2024)">
+      <input type="text" id="tlTitle" placeholder="Kichwa">
+      <textarea id="tlText" placeholder="Maelezo..." rows="3"></textarea>
+      <button id="addTlBtn" class="btn-dash primary">➕ Ongeza Historia</button>
+      <div id="tlList" class="item-list"></div>
+    </div>
+
+    <div class="dash-card glass">
+      <h2>⚙️ Mipangilio</h2>
+      <label>Tarehe ya Kuzaliwa:</label>
+      <input type="date" id="birthdaySetting">
+      <button id="saveSettingsBtn" class="btn-dash primary">💾 Hifadhi</button>
+      <hr>
+      <h3>📊 Takwimu</h3>
+      <p>Picha zilizoongezwa: <span id="statPhotos">0</span></p>
+      <p>Historia zilizoongezwa: <span id="statTimeline">0</span></p>
+      <hr>
+      <button id="resetBtn" class="btn-dash danger">🗑️ Futa Data Yote</button>
+    </div>
+  </div>
+</div>
+
+<script src="admin.js"></script>
+</body>
+</html>
